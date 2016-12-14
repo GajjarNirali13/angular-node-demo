@@ -1,0 +1,24 @@
+.home {
+	padding-top: 20px;
+}
+
+.home h1{
+	text-align: center;
+	color: #00bcd4;
+}
+
+.home h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 25px;
+	color: gray;		
+}
+
+.home-href {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.booked-status {
+	color: red;
+}

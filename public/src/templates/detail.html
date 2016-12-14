@@ -1,0 +1,64 @@
+<div class="container">
+	<header class="home">
+		<h1>Time Slot Detail</h1>
+	</header>
+	<div>
+		<form name="userForm" novalidate>
+			<div class="row">
+				<div class="form-group">
+		            <label>First Name</label>
+		            <input type="text" name="fname" class="form-control" 
+		                ng-model="vm.detail.firstName"
+		                required>
+		                
+		            <div class="help-block" ng-messages="userForm.fname.$error" ng-if="userForm.fname.$touched">
+					    <p ng-message="required">First name is required.</p>
+					</div>
+		        </div>		        
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+		            <label>Last Name</label>
+		            <input type="text" name="lname" class="form-control" 
+		                ng-model="vm.detail.lastName"
+		                required>
+		                
+		            <div class="help-block" ng-messages="userForm.lname.$error" ng-if="userForm.lname.$touched">
+					    <p ng-message="required">Last name is required.</p>
+					</div>
+		        </div>		        
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+		            <label>Phone Number</label>
+		            <input type="text" name="phNo" class="form-control" 
+		                ng-model="vm.detail.phoneNumber"
+		                onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+		                ng-minlength="10"
+                		ng-maxlength="10"
+		                required>
+		                
+		            <div class="help-block" ng-messages="userForm.phNo.$error" ng-if="userForm.phNo.$touched">
+					    <p ng-message="required">Phone Number is required.</p>
+					    <p ng-message="minlength">Phone Number should be 10 digit.</p>
+					    <p ng-message="maxlength">Phone Number should be 10 digit.</p>
+					</div>
+		        </div>		        
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<button type="submit" class="btn btn-success pull-right" ng-click="vm.saveDetail(userForm)">
+						Save
+					</button>
+				</div>
+				<div class="col-md-6">
+					<button class="btn btn-danger" ng-click="vm.cancel()">Cancel</button>
+				</div>
+			</div>
+		</form>
+		
+	</div>
+</div>

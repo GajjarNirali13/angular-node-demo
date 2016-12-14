@@ -1,0 +1,14 @@
+<div class="container">
+	<header class="home">
+		<h1>Time Slot List</h1>
+	</header>
+	<div>
+		<ul class="list-group">
+		  <li class="list-group-item" ng-repeat="timeSlot in vm.timeSlotList" 
+		  		ng-click="vm.goToDetailPage(timeSlot)">
+		    <span class="badge">{{timeSlot.isBooked==true?'Not Available':'Available'}}</span>
+		    <span ng-class="timeSlot.isBooked==true?'booked-status':''">{{timeSlot.timeSlot}}</span>
+		  </li>
+		</ul>
+	</div>
+</div>
